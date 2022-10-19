@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login form </title>
+  <link rel="stylesheet" href="logincss.css">
+</head>
+<body>
+
+<div id="login-error-msg-holder">
+    <p id="login-error-msg">Invalid Email <span id="error-msg-second-line">and/or password</span></p>
+    </div>
+<div class="wrapper">
+    <center><h2 class="title">Login</h2></center>
+  <div class="inner-wrapper text-center">
+    <form  id="formvalidate">
+        <div class="input-group">
+      
+        <label class="palceholder" for="email">Email</label><br>
+        <input class="form-control" name="email" id="email" type="text"  required/><br>
+        <span class="lighting"></span>
+      </div>
+      <div class="input-group">
+        <label class="placeholder" for="userPassword">Password</label><br>
+        <input class="form-control" name="userPassword" id="userPassword" type="password"   required /><br>
+        <span class="lighting"></span>
+      
+      <button type="submit" id="login">Login</button>
+      </div>
+      <div class="clearfix supporter">
+        <a class="forgot pull-right" href="forgotmega.html">Forgot Password?</a>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+<script>
+  constant Login=document.getElementById("formvalidate");
+  constant Button=document.getElementById("login");
+  constant errormsg=document.getElementById("login-error-msg")
+
+  constant email=Login.email.value;
+  constant password=Login.userPassword.value;
+
+  if(email ==="email@email.com" && password==="Pass140"){
+    alert("Correct Credentials");
+    return true;
+  }
+  else{
+    alert("Sorry Please try again");
+    return false;
+  }
+</script>
+</html>
